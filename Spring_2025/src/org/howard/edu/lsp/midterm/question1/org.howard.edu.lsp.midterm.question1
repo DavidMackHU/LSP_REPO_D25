@@ -1,0 +1,43 @@
+David Mack @03123869
+
+Classes: Book, User, Librarian, System
+
+Part 1: -----------------------------------------------------------------------
+
+Book: represents an individual book and tracks it
+User: represents a person and tracks them
+Librarian: can add or remove books and tracks availability
+System: Maintains the list of all books and users and enhances functionality
+
+Part 2: -----------------------------------------------------------------------
+
+Book:
+ - store details (title, author, ISBN, availability)
+ - change availability (borrowed or returned
+User:
+ - Borrow books
+ - Return book
+Librarian:
+ - add and remove books
+ - track book status
+System: 
+ - track books and users
+ - manages borrow and return operations
+ 
+Part 3: Collaborators -----------------------------------------------------------------------
+
+Book: User, System
+ - User: to update book status
+ - System: to track availability
+User: Book, System
+ - Book: update book details
+ - System: to manage inventory
+Librarian: Book, System
+ - Book: to update book details
+ - System: to manage inventory
+System: Book, User, Librarian
+ - Book: to track inventory
+ - User: to create a borrow limit
+ - Librarian: to manage inventory
+
+
